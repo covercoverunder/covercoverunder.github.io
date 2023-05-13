@@ -1,3 +1,4 @@
+/* general */
 h1
 {
     font-family: 'Courier New', Courier, monospace;
@@ -12,18 +13,12 @@ body
     background-size:cover;
 }
 
+/* hyperlink */
 .link-container
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.table-container
-{
-	margin: auto;
-	max-width: fit-content;
-	overflow-x: auto;
 }
 
 .link
@@ -45,6 +40,12 @@ body
 }
 
 /* EXCEL RELATED STYLES */
+.table-container
+{
+	margin: auto;
+	max-width: fit-content;
+	overflow-x: auto;
+}
 
 .xl6321706 
     {padding-top:1px;
