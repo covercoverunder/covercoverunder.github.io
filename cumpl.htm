@@ -1,678 +1,142 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>cumulative p/l</title>
-<link rel="icon" type="image/x-icon" href="lib/favicon.png">
-<link rel="stylesheet" href="style.css">
-<footer>
-	<a href="index.html" class="return-link">return to menu</a>
-</footer>
-<!-- below predefined from excel -->
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link rel=File-List href="cumpl_files/filelist.xml">
-<style id="TL2_21706_Styles">
-<!--table
-	{mso-displayed-decimal-separator:"\.";
-	mso-displayed-thousand-separator:"\,";}
-.xl6321706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:none;
-	border-right:.5pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6421706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"Short Date";
-	text-align:center;
-	vertical-align:bottom;
-	border-top:none;
-	border-right:.5pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6521706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Fixed;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:none;
-	border-right:.5pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6621706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:general;
-	vertical-align:bottom;
-	background:black;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6721706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6821706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"Short Date";
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl6921706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Fixed;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7021706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Fixed;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#FCE4D6;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7121706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#F4B084;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7221706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#8EA9DB;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7321706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#FCE4D6;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7421706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Percent;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#D9E1F2;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7521706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#FCE4D6;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7621706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Percent;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D9E1F2;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7721706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:1.0pt solid windowtext;
-	border-right:.5pt solid windowtext;
-	border-bottom:1.0pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#3A3838;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7821706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:1.0pt solid windowtext;
-	border-right:.5pt solid windowtext;
-	border-bottom:1.0pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#3A3838;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl7921706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:1.0pt solid windowtext;
-	border-right:.5pt solid windowtext;
-	border-bottom:1.0pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#3A3838;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8021706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:1.0pt solid windowtext;
-	border-right:1.0pt solid windowtext;
-	border-bottom:1.0pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#3A3838;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8121706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Fixed;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:none;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8221706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:Fixed;
-	text-align:center;
-	vertical-align:bottom;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	background:#D0CECE;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8321706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"\@";
-	text-align:center;
-	vertical-align:middle;
-	border:.5pt solid windowtext;
-	background:#8EA9DB;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8421706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"\@";
-	text-align:center;
-	vertical-align:middle;
-	border:.5pt solid windowtext;
-	background:#8EA9DB;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8521706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"\@";
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#8EA9DB;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8621706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#F4B084;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl8721706
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:"Courier New", monospace;
-	mso-font-charset:0;
-	mso-number-format:"Short Date";
-	text-align:center;
-	vertical-align:bottom;
-	border:.5pt solid windowtext;
-	background:#F4B084;
-	mso-pattern:black none;
-	white-space:nowrap;}
--->
-</style>
-</head>
-
-<body>
-<header>
-	<h1 class="title">cumulative p/l</h1>
-</header>
-<!-- tag below this is predefined from excel -->
-<!--[if !excel]>&nbsp;&nbsp;<![endif]-->
-<!--The following information was generated by Microsoft Excel's Publish as Web
-Page wizard.-->
-<!--If the same item is republished from Excel, all information between the DIV
-tags will be replaced.-->
-<!----------------------------->
-<!--START OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD -->
-<!----------------------------->
-
-<div id="TL2_21706" align=center x:publishsource="Excel">
-
-<table border=0 cellpadding=0 cellspacing=0 width=664 class=xl6621706
- style='border-collapse:collapse;table-layout:fixed;width:500pt'>
- <col class=xl6821706 width=166 style='mso-width-source:userset;mso-width-alt:
- 6070;width:125pt'>
- <col class=xl6721706 width=166 style='mso-width-source:userset;mso-width-alt:
- 6070;width:125pt'>
- <col class=xl6921706 width=166 style='mso-width-source:userset;mso-width-alt:
- 6070;width:125pt'>
- <col class=xl8221706 width=166 style='mso-width-source:userset;mso-width-alt:
- 6070;width:125pt'>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl7121706 width=166 style='height:15.75pt;width:125pt'>Days
-  (D)</td>
-  <td class=xl7121706 width=166 style='border-left:none;width:125pt'>P/L ($)</td>
-  <td class=xl7221706 width=166 style='border-left:none;width:125pt'>Trades (T)</td>
-  <td class=xl7221706 width=166 style='border-left:none;width:125pt'>W/L (%)</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 5D</td>
-  <td class=xl7021706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8321706 style='border-top:none;border-left:none'>Last 5T</td>
-  <td class=xl7421706 style='border-top:none;border-left:none'>40.00%</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 10D</td>
-  <td class=xl7321706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8321706 style='border-top:none;border-left:none'>Last 10T</td>
-  <td class=xl7421706 style='border-top:none;border-left:none'>-</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 30D</td>
-  <td class=xl7321706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8421706 style='border-top:none;border-left:none'>Last 25T</td>
-  <td class=xl7421706 style='border-top:none;border-left:none'>-</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 60D</td>
-  <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8421706 style='border-top:none;border-left:none'>Last 50T</td>
-  <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 90D</td>
-  <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8521706 style='border-top:none;border-left:none'>Last 100T</td>
-  <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 180D</td>
-  <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8521706 style='border-top:none;border-left:none'>Last 250T</td>
-  <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
- </tr>
- <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl8721706 style='height:15.75pt;border-top:none'>Last
-  365D</td>
-  <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
-  <td class=xl8521706 style='border-top:none;border-left:none'>All Time</td>
-  <td class=xl7621706 style='border-top:none;border-left:none'>40.00%</td>
- </tr>
- <tr height=22 style='height:16.5pt'>
-  <td height=22 class=xl7721706 style='height:16.5pt'>Date</td>
-  <td class=xl7821706 style='border-left:none'># of Trades</td>
-  <td class=xl7921706 style='border-left:none'>P/L</td>
-  <td class=xl8021706 style='border-left:none'>Cumulative P/L</td>
- </tr>
- <tr height=0 style='display:none'>
-  <td class=xl6421706>1/1/2023</td>
-  <td class=xl6321706 style='border-left:none'>0</td>
-  <td class=xl6521706 style='border-left:none'>#REF!</td>
-  <td class=xl8121706 style='border-left:none'>0.00</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>4/4/2023</td>
-  <td class=xl6321706 style='border-left:none'>1</td>
-  <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#9C0006;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
-  border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#FFC7CE;mso-pattern:black none'>-154.40</td>
-  <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
-  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
-  text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
-  border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#FFC7CE;mso-pattern:black none'>-154.40</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>5/11/2023</td>
-  <td class=xl6321706 style='border-left:none'>1</td>
-  <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#006100;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
-  border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#C6EFCE;mso-pattern:black none'>8.10</td>
-  <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
-  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
-  text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
-  border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#FFC7CE;mso-pattern:black none'>-146.30</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>5/12/2023</td>
-  <td class=xl6321706 style='border-left:none'>3</td>
-  <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#9C0006;
-  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
-  none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
-  border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#FFC7CE;mso-pattern:black none'>-13.20</td>
-  <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
-  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
-  text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
-  border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
-  background:#FFC7CE;mso-pattern:black none'>-159.50</td>
- </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=166 style='width:125pt'></td>
-  <td width=166 style='width:125pt'></td>
-  <td width=166 style='width:125pt'></td>
-  <td width=166 style='width:125pt'></td>
- </tr>
- <![endif]>
-</table>
-
-</div>
-
-
-<!----------------------------->
-<!--END OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD-->
-<!----------------------------->
-</body>
-
+<html>
+  <head>
+    <title>cumulative pl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="lib/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <div class="link-container">
+        <a href="index.html" class="link">return to menu</a>
+    </div>
+  </head>
+  <body>
+    <header>
+        <h1 class="title">cumulative p/l</h1>
+    </header>
+    <div class="table-container">
+      <table>
+        <table border=0 cellpadding=0 cellspacing=0 width=664 class=xl6621706
+        style='border-collapse:collapse;table-layout:fixed;width:500pt'>
+        <col class=xl6821706 width=166 style='mso-width-source:userset;mso-width-alt:
+        6070;width:125pt'>
+        <col class=xl6721706 width=166 style='mso-width-source:userset;mso-width-alt:
+        6070;width:125pt'>
+        <col class=xl6921706 width=166 style='mso-width-source:userset;mso-width-alt:
+        6070;width:125pt'>
+        <col class=xl8221706 width=166 style='mso-width-source:userset;mso-width-alt:
+        6070;width:125pt'>
+        <tr height=21 style='height:15.75pt'>
+         <td height=21 class=xl7121706 width=166 style='height:15.75pt;width:125pt'>Days
+         (D)</td>
+         <td class=xl7121706 width=166 style='border-left:none;width:125pt'>P/L ($)</td>
+         <td class=xl7221706 width=166 style='border-left:none;width:125pt'>Trades (T)</td>
+         <td class=xl7221706 width=166 style='border-left:none;width:125pt'>W/L (%)</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 5D</td>
+         <td class=xl7021706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8321706 style='border-top:none;border-left:none'>Last 5T</td>
+         <td class=xl7421706 style='border-top:none;border-left:none'>40.00%</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 10D</td>
+         <td class=xl7321706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8321706 style='border-top:none;border-left:none'>Last 10T</td>
+         <td class=xl7421706 style='border-top:none;border-left:none'>-</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8621706 style='height:15.0pt;border-top:none'>Last 30D</td>
+         <td class=xl7321706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8421706 style='border-top:none;border-left:none'>Last 25T</td>
+         <td class=xl7421706 style='border-top:none;border-left:none'>-</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 60D</td>
+         <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8421706 style='border-top:none;border-left:none'>Last 50T</td>
+         <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 90D</td>
+         <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8521706 style='border-top:none;border-left:none'>Last 100T</td>
+         <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl8721706 style='height:15.0pt;border-top:none'>Last 180D</td>
+         <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8521706 style='border-top:none;border-left:none'>Last 250T</td>
+         <td class=xl7621706 style='border-top:none;border-left:none'>-</td>
+        </tr>
+        <tr height=21 style='height:15.75pt'>
+         <td height=21 class=xl8721706 style='height:15.75pt;border-top:none'>Last
+         365D</td>
+         <td class=xl7521706 style='border-top:none;border-left:none'>-</td>
+         <td class=xl8521706 style='border-top:none;border-left:none'>All Time</td>
+         <td class=xl7621706 style='border-top:none;border-left:none'>40.00%</td>
+        </tr>
+        <tr height=22 style='height:16.5pt'>
+         <td height=22 class=xl7721706 style='height:16.5pt'>Date</td>
+         <td class=xl7821706 style='border-left:none'># of Trades</td>
+         <td class=xl7921706 style='border-left:none'>P/L</td>
+         <td class=xl8021706 style='border-left:none'>Cumulative P/L</td>
+        </tr>
+        <tr height=0 style='display:none'>
+         <td class=xl6421706>1/1/2023</td>
+         <td class=xl6321706 style='border-left:none'>0</td>
+         <td class=xl6521706 style='border-left:none'>#REF!</td>
+         <td class=xl8121706 style='border-left:none'>0.00</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>4/4/2023</td>
+         <td class=xl6321706 style='border-left:none'>1</td>
+         <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#9C0006;
+         font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+         none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
+         border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#FFC7CE;mso-pattern:black none'>-154.40</td>
+         <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
+         color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+         text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
+         border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#FFC7CE;mso-pattern:black none'>-154.40</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>5/11/2023</td>
+         <td class=xl6321706 style='border-left:none'>1</td>
+         <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#006100;
+         font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+         none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
+         border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#C6EFCE;mso-pattern:black none'>8.10</td>
+         <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
+         color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+         text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
+         border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#FFC7CE;mso-pattern:black none'>-146.30</td>
+        </tr>
+        <tr height=20 style='height:15.0pt'>
+         <td height=20 class=xl6821706 style='height:15.0pt;border-top:none'>5/12/2023</td>
+         <td class=xl6321706 style='border-left:none'>3</td>
+         <td class=xl6521706 style='border-left:none;font-size:11.0pt;color:#9C0006;
+         font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+         none;font-family:"Courier New", monospace;border-top:none;border-right:.5pt solid windowtext;
+         border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#FFC7CE;mso-pattern:black none'>-13.20</td>
+         <td class=xl8221706 style='border-top:none;border-left:none;font-size:11.0pt;
+         color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+         text-line-through:none;font-family:"Courier New", monospace;border-top:.5pt solid windowtext;
+         border-right:none;border-bottom:.5pt solid windowtext;border-left:.5pt solid windowtext;
+         background:#FFC7CE;mso-pattern:black none'>-159.50</td>
+        </tr>
+        <![if supportMisalignedColumns]>
+        <tr height=0 style='display:none'>
+         <td width=166 style='width:125pt'></td>
+         <td width=166 style='width:125pt'></td>
+         <td width=166 style='width:125pt'></td>
+         <td width=166 style='width:125pt'></td>
+        </tr>
+        <![endif]>
+       </table>
+      </table>
+    </div>
 </html>
