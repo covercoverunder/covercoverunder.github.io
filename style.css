@@ -1,7 +1,7 @@
 /* general */
 h1
 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
     color: white;
     font-size: 48px;
     text-align: center;
@@ -9,7 +9,7 @@ h1
 
 body
 {
-	background-image: url("lib/spongebob.gif");
+	background-image: url("lib/MISC/spongebob.gif");
     background-size:cover;
 }
 
