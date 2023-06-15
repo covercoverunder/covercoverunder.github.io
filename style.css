@@ -45,4 +45,5 @@ body
 	margin: auto;
 	max-width: fit-content;
 	overflow-x: auto;
+    overflow-y: auto;
 }
