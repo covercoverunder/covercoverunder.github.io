@@ -26,6 +26,24 @@ body
     align-items: center;
 }
 
+.return
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-top:35px;
+}
+
+.return:hover
+{
+    color: red;
+    font-size: 14px;
+    border-bottom: 2px solid red;
+}
+
 .link
 {
     font-family: 'Courier New', Courier, monospace;
@@ -39,9 +57,9 @@ body
 
 .link:hover
 {
-    color: red;
+    color: yellow;
     font-size: 14px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid yellow;
 }
 
 /* EXCEL RELATED STYLES */
