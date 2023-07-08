@@ -68,7 +68,7 @@ body
 	margin: auto;
 	max-width: fit-content;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .table-container::-webkit-scrollbar
