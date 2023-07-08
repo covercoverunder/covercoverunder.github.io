@@ -3,7 +3,7 @@ h1
 {
     font-family:'Courier New', Courier, monospace;
     color: white;
-    font-size: 48px;
+    font-size: 3em;
     text-align: center;
 }
 
@@ -31,16 +31,16 @@ body
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: white;
-    font-size: 12px;
+    font-size: 0.72em;
     text-decoration: none;
     border-bottom: 1px solid white;
-    padding-top:35px;
+    padding-top:3vh;
 }
 
 .return:hover
 {
     color: red;
-    font-size: 14px;
+    font-size: 0.85em;
     border-bottom: 2px solid red;
 }
 
@@ -49,16 +49,16 @@ body
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: white;
-    font-size: 12px;
+    font-size: 0.25em;
     text-decoration: none;
     border-bottom: 1px solid white;
-    padding-top:35px;
+    padding-top: 3vh;
 }
 
 .link:hover
 {
     color: yellow;
-    font-size: 14px;
+    font-size: 0.3em;
     border-bottom: 2px solid yellow;
 }
 
@@ -67,7 +67,6 @@ body
 {
 	margin: auto;
 	max-width: fit-content;
-	overflow-x: auto;
-    overflow-y: auto;
-    padding-bottom:70px;
+    max-height: 75vh;
+	overflow: auto;
 }
