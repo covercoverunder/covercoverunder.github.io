@@ -68,5 +68,26 @@ body
 	margin: auto;
 	max-width: fit-content;
     max-height: 75vh;
-	overflow: auto;
+    overflow-y: scroll;
+}
+
+.table-container::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px
+}
+
+.table-container::-webkit-scrollbar-thumb
+{
+    background: rgb(128,128,128);
+}
+
+.table-container::-webkit-scrollbar-track
+{
+    background: rgb(25,25,25);
+}
+
+.table-container::-webkit-scrollbar-corner
+{
+    background: rgb(25,25,25)
 }
