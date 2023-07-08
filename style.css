@@ -69,4 +69,5 @@ body
 	max-width: fit-content;
 	overflow-x: auto;
     overflow-y: auto;
+    padding-bottom:70px;
 }
